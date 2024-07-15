@@ -1,4 +1,4 @@
-# Official Repository of LowResLM 
-The site is available at https://LowResLM.github.io/
+# Official Repository of LoResLM 
+The site is available at https://LoResLM.github.io/
 
 
