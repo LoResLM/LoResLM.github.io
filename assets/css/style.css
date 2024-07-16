@@ -270,7 +270,7 @@ a:hover { text-decoration: underline; }
   .btn + .btn { margin-top: 1rem; margin-left: 0; } }
 
 .page-header {
-  background-image: url('https://github.com/LowResLM/LowResLM.github.io/blob/593278e682e569b5e9d3944b62b50c6944fcda21/images/banner.png'); /* Set the path to your image */
+  background-image: url('images/banner.png'); /* Set the path to your image */
   background-size: cover; /* Ensures the image covers the entire background */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
