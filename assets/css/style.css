@@ -272,6 +272,7 @@ a:hover { text-decoration: underline; }
 .page-header {
   background-image: url('banner.png'); /* Set the path to your image */
   text-align: center;
+  height: 500px;
   font-family: "Open Sans"
 }
 

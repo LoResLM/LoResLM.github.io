@@ -143,6 +143,7 @@ a:hover { text-decoration: underline; }
 .page-header {
   background-image: url('banner.png'); /* Set the path to your image */
   text-align: center;
+  height: 500px;
   font-family: "Open Sans"
 }
 /*.page-header { color: #fff; text-align: center; background-color: #880808; background-image: linear-gradient(#880808, #880808, #880808); font-family: "Open Sans" }*/
