@@ -142,9 +142,6 @@ a:hover { text-decoration: underline; }
 
 .page-header {
   background-image: url('banner.png'); /* Set the path to your image */
-  background-size: cover; /* Ensures the image covers the entire background */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
   text-align: center;
   font-family: "Open Sans"
 }
