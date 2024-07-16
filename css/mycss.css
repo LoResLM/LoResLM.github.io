@@ -80,3 +80,46 @@
 .dropdown:hover .btn {
   background-color: #3e8e41;
 }
+
+ .organizer-table {
+   width: 100%;
+   margin-bottom: 20px; /* Added for spacing */
+   border-collapse: collapse; /* Collapse table borders */
+ }
+
+.organizer-table td, .organizer-table th {
+  padding: 10px;
+  vertical-align: top;
+  border: none; /* Remove borders on table cells */
+}
+
+.organizer-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.organizer-name {
+  font-weight: bold;
+}
+
+.organizer-university {
+  font-style: italic;
+}
+
+/* Added styles for side table wrapper */
+#side-table-wrapper {
+  width: 310px;
+  font-size: small;
+  float: right; /* Aligns to the right */
+}
+
+#side-table-wrapper h4 {
+  margin-bottom: 10px;
+}
+
+#important-dates {
+  width: 100%;
+}
+

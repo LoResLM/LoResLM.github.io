@@ -1,145 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-  <meta charset="UTF-8">
-  <title>The First Workshop on Language Models for Low-Resource Languages</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#157878">
-  <link rel="stylesheet" href="/css/normalize.css">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/css/cayman.css">
-  <link rel="stylesheet" href="/css/mycss.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    
+<head>
+    <meta charset="UTF-8">
+    <title>The First Workshop on Language Models for Low-Resource Languages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/cayman.css">
+    <link rel="stylesheet" href="/css/mycss.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+            integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+            crossorigin="anonymous"></script>
 
 </head>
 
 
-   <body>
-    <nav id="navbarID" class="navbar sticky-top navbar-expand-lg navbar-light bg-light navbar-static-top">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-       <img src="/favicon.ico" alt="logo" width="6%" height="6%">
-      <b>LoResLM @ COLING 2025</b>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/" id="home"><b>Home</b></a>
-        </li>
+<body>
+<nav id="navbarID" class="navbar sticky-top navbar-expand-lg navbar-light bg-light navbar-static-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src="/favicon.ico" alt="logo" width="6%" height="6%">
+            <b>LoResLM @ COLING 2025</b>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/" id="home"><b>Home</b></a>
+                </li>
 
-<!--          <li class="nav-item">-->
-<!--        <a class="nav-link" aria-current="page" href="/awards"><b>Awards</b></a>-->
-<!--        </li>-->
+                <!--          <li class="nav-item">-->
+                <!--        <a class="nav-link" aria-current="page" href="/awards"><b>Awards</b></a>-->
+                <!--        </li>-->
 
-          <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/cfp"><b>CFP</b></a>
-        </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/cfp"><b>CFP</b></a>
+                </li>
 
 
-        <li class="nav-item active">
-          <a class="nav-link" aria-current="page" href="/organizers"><b>Organisers</b></a>
-        </li>
-<!--        <li class="nav-item">-->
-<!--          <a class="nav-link" aria-current="page" href="/sponsors"><b>Sponsors</b></a>-->
-<!--        </li>-->
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/contact"><b>Contact</b></a>
-        </li>
-      </ul>
+                <li class="nav-item active">
+                    <a class="nav-link" aria-current="page" href="/organizers"><b>Organisers</b></a>
+                </li>
+                <!--        <li class="nav-item">-->
+                <!--          <a class="nav-link" aria-current="page" href="/sponsors"><b>Sponsors</b></a>-->
+                <!--        </li>-->
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/contact"><b>Contact</b></a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
 
- <section class="page-header">
-  <h1 class="project-name">The First Workshop on Language Models for <br> Low-Resource Languages</h1>
-  <h3 class="project-tagline">Building Bridges through NLP Innovation: Empowering Linguistic Diversity by Crafting Language Models for Low-Resource Languages </h3>
+<section class="page-header">
+    <h1 class="project-name">The First Workshop on Language Models for <br> Low-Resource Languages</h1>
+    <h3 class="project-tagline">Building Bridges through NLP Innovation: Empowering Linguistic Diversity by Crafting
+        Language Models for Low-Resource Languages </h3>
 
 </section>
 
 
-    <section class="main-content">
-      <div id="side-table-wrapper" style="float:right; width:310px; font-size: small">
+<section class="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h3 id="organizers">Organising Committee</h3>
+                <table class="organizer-table">
+                    <tr>
+                        <td>
+                            <img src="images/hansi.jfif" alt="Hansi Hettiarachchi" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px"><a
+                                        href="https://www.lancaster.ac.uk/sci-tech/about-us/people/hansi-hettiarachchi">Hansi
+                                    Hettiarachchi</a></p>
+                                <p class="organizer-university">Lancaster University, UK</p>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/tharindu.jfif" alt="Tharindu Ranasinghe" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px"><a href="https://tharindu.co.uk/">Tharindu Ranasinghe</a></p>
+                                <p class="organizer-university">Lancaster University, UK</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/paul.png" alt="Paul Rayson" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px"><a href="https://www.lancaster.ac.uk/lira/people/paul-rayson">Paul
+                                    Rayson</a></p>
+                                <p class="organizer-university">Lancaster University, UK</p>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/ruslan.jpg" alt="Ruslan Mitkov" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px"><a href="https://wp.lancs.ac.uk/mitkov/">Ruslan Mitkov</a></p>
+                                <p class="organizer-university">Lancaster University, UK</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/gaber.jfif" alt="Mohamed Gaber" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px"><a href="https://mohamedmgaber.weebly.com/">Mohamed Gaber</a>
+                                </p>
+                                <p class="organizer-university">Birmingham City University, UK</p>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/damith.jpg" alt="Damith Premasiri" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px">Damith Premasiri</p>
+                                <p class="organizer-university">Lancaster University, UK</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/fiona.jfif" alt="Fiona Anting Tan" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px"><a href="https://tanfiona.github.io/">Fiona Anting Tan</a></p>
+                                <p class="organizer-university">National University of Singapore, Singapore</p>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/lasitha.jfif" alt="Lasitha Uyangodage" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px">Lasitha Uyangodage</p>
+                                <p class="organizer-university">University of Münster, Germany</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-4">
+                <div id="side-table-wrapper">
+                    <h4 id="side-table-header">Important Dates</h4>
+                    <table id="important-dates" class="table">
+                        <tbody>
+                        <tr>
+                            <td>Paper submission due</td>
+                            <td>November 25 (Mon), 2024</td>
+                        </tr>
+                        <tr>
+                            <td>Notification of acceptance</td>
+                            <td>December 5 (Thu), 2024</td>
+                        </tr>
+                        <tr>
+                            <td>Camera-ready due</td>
+                            <td>December 13 (Tue), 2024</td>
+                        </tr>
+                        <tr>
+                            <td>Workshop</td>
+                            <td>19/20 January 2025 co-located with <a href="https://coling2025.org/"
+                                                                      target="_blank">COLING</a></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><small>* These dates are approximate date based on COLING 2025 and are
+                                subject to changes.</small></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 
-        <h4 id="side-table-header">Important Dates</h4>
-        <table id="important-dates" class="table table-condensed">
-          <tbody>
+        <h3 id="program-committee">Program Committee:</h3>
+        <p><strong>(Coming soon!!)</strong></p>
+    </div>
+</section>
 
-            <tr><td>Paper submission due</td>
-              <td>
-                November 25 (Mon), 2024
-              </td>
-            </tr>
-
-            <tr><td>Notification of acceptance</td>
-              <td>
-                December 5 (Thu), 2024
-              </td>
-            </tr>
-
-            <tr><td>Camera-ready due</td>
-              <td>
-                December 13 (Tue), 2024
-              </td>
-            </tr>
-            <tr><td>Workshop</td>
-              <td>19/20 January 2025 co-located with <a href="https://coling2025.org/" target="_blank">COLING</a></td>
-            </tr>
-
-            <tr>
-               <p align="center"><small>* These dates are approximate date based on COLING 2025 and are subject to changes.</small></p>
-<!--              <p align="center"><small>* <em>All deadlines are calculated at 11:59 pm <br> UTC-12 hours</em></small></p>-->
-            </tr>
-          </tbody>
-                  </table>
-          </font><br>
-
-
-      </div>
-      <!-- ===================================== -->
-      <h3 id="organizers">Organising Committee</h3>
-
-<ul>
-  <li><a href="https://www.lancaster.ac.uk/sci-tech/about-us/people/hansi-hettiarachchi">Hansi Hettiarachchi</a>, Lancaster University, UK</li>
-  <li><a href="https://tharindu.co.uk/">Tharindu Ranasinghe</a>, Lancaster University, UK</li>
-  <li><a href="https://www.lancaster.ac.uk/lira/people/paul-rayson">Paul Rayson</a>, Lancaster University, UK</li>
-  <li><a href="https://wp.lancs.ac.uk/mitkov/">Ruslan Mitkov</a>, Lancaster University, UK</li>
-  <li><a href="https://mohamedmgaber.weebly.com/">Mohamed Gaber</a>, Birmingham City University, UK</li>
-  <li>Damith Premasiri</a>, Lancaster University, UK</li>
-  <li><a href="https://tanfiona.github.io/">Fiona Anting Tan</a>, National University of Singapore, Singapore</li>
-  <li>Lasitha Uyangodage</a>, University of Münster, Germany</li>
-</ul>
-
-
-
-<h3 id="program-committee">Program Committee:</h3>
-<p><strong>(Coming soon!!)</strong></p>
-
-
-
-
-      <footer class="site-footer">
-<center>
-<!--<a href="mailto:"><i class="svg-icon-email"></i></a>
-
-<a href="https://github.com/"><i class="svg-icon-github"></i></a>
-<a href="https://www.twitter.com/"><i class="svg-icon-twitter"></i></a>
--->
-</center>
-</footer>
-
-
-    </section>
-
-  </body>
+</body>
 </html>
