@@ -145,7 +145,7 @@ a:hover { text-decoration: underline; }
 /*  text-align: center;*/
 /*  font-family: "Open Sans"*/
 /*}*/
-.page-header { color: #fff; text-align: center; background-color: #880808; background-image: url('../banner.png'); font-family: "Open Sans"; height: 400px; }
+.page-header { color: #fff; text-align: center; background-color: #880808; background-image: url('../banner.png'); font-family: "Open Sans"; }
 @media screen and (min-width: 64em) { .page-header { padding: 5rem 6rem; } }
 @media screen and (min-width: 42em) and (max-width: 64em) { .page-header { padding: 3rem 4rem; } }
 @media screen and (max-width: 42em) { .page-header { padding: 2rem 1rem; } }
