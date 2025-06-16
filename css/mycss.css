@@ -123,3 +123,19 @@
   width: 100%;
 }
 
+.navbar-nav > li.nav-item > a.nav-link {
+  white-space: nowrap;
+  padding-right: 1rem;
+}
+
+/* Submenu positioning */
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: 0.1rem;
+}
+
+/* Ensure it appears on hover (optional if using click) */
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
