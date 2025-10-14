@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <title>Language Models for Low-Resource Languages</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/cayman.css">
+  <link rel="stylesheet" href="/css/mycss.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+    <style>
+  .page-header {
+      background-image: url('banner_1.jpg') !important;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 400px;
+  }
+  </style>
+
+  </head>
+
+
+  <body>
+    <nav id="navbarID" class="navbar sticky-top navbar-expand-lg navbar-light bg-light navbar-static-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+       <img src="/favicon.ico" alt="logo" width="6%" height="6%">
+      <b>NLP-LoResLM</b>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <!-- Home -->
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/2025/home.html" id="home"><b>Home</b></a>
+            </li>
+
+            <!-- Workshop Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="workshopDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <b>Workshop</b>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="workshopDropdown">
+                    <!-- 2025 Nested Dropdown -->
+                    <li class="dropdown-submenu position-relative">
+                        <a class="dropdown-item dropdown-toggle" href="#">2025 @COLING</a>
+                        <ul class="dropdown-menu start-100 top-0 mt-0">
+                            <li><a class="dropdown-item" href="/2025/home.html">Home</a></li>
+                            <li><a class="dropdown-item" href="/2025/program.html">Programme</a></li>
+                            <li><a class="dropdown-item" href="/2025/cfp.html">CFP</a></li>
+                            <li><a class="dropdown-item" href="/2025/organizers.html">Organisers</a></li>
+                            <li><a class="dropdown-item" href="/2025/sponsors.html">Sponsors</a></li>
+                            <li><a class="dropdown-item" href="/2025/contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Special Issue -->
+            <li class="nav-item">
+                <a class="nav-link active" href="/2025/specialissue.html"><b>Special Issue</b></a>
+            </li>
+        </ul>
+
+        <!--      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">-->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link active" aria-current="page" href="/" id="home"><b>Home</b></a>-->
+<!--        </li>-->
+
+<!--&lt;!&ndash;          <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;        <a class="nav-link" aria-current="page" href="/awards"><b>Awards</b></a>&ndash;&gt;-->
+<!--&lt;!&ndash;        </li>&ndash;&gt;-->
+
+<!--          <li class="nav-item">-->
+<!--          <a class="nav-link" aria-current="page" href="/program"><b>Programme</b></a>-->
+<!--        </li>-->
+
+<!--          <li class="nav-item">-->
+<!--          <a class="nav-link" aria-current="page" href="/cfp"><b>CFP</b></a>-->
+<!--        </li>-->
+
+
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link" aria-current="page" href="/organizers"><b>Organisers</b></a>-->
+<!--        </li>-->
+<!--       <li class="nav-item">-->
+<!--         <a class="nav-link" aria-current="page" href="/sponsors"><b>Sponsors</b></a>-->
+<!--       </li>-->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link" aria-current="page" href="/contact"><b>Contact</b></a>-->
+<!--        </li>-->
+<!--      </ul>-->
+    </div>
+  </div>
+</nav>
+
+<section class="page-header">
+    <h1 class="project-name">Language Models for Low-Resource Languages</h1>
+    <h2 class="project-tagline">Building Bridges through NLP Innovation:<br>Empowering Linguistic Diversity by Crafting
+        Language Models for Low-Resource Languages </h2>
+
+</section>
+
+
+    <section class="main-content">
+      <div id="side-table-wrapper" style="float:right; width:310px; font-size: small">
+
+        <h4 id="side-table-header">Important Dates: <br> NLP-LoResLM </h4>
+        <table id="important-dates" class="table">
+                        <tbody>
+                        <tr>
+                            <td>Paper submission due</td>
+                            <td>December 31, 2025</td>
+                        </tr>
+                        <tr>
+                            <td>First Decision</td>
+                            <td>March 31, 2026 - April 30, 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Revised Version Submission</td>
+                            <td>May 1, 2026 - June 1, 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Final Decision</td>
+                            <td>August 30, 2026</td>
+                        </tr>
+                        </tbody>
+                    </table>
+          </font>
+          <br>
+
+
+      </div>
+      <!-- ===================================== -->
+      <!--## Welcome!-->
+
+
+<!--## About LowResLM -- 2024-->
+<!---->
+        <h3>Journal Natural Language Processing - Special Issue on Language Models for Low-Resource Languages</h3>
+<p>Neural language models have revolutionised natural language processing (NLP) and have provided state-of-the-art results for many tasks. However, their effectiveness is largely dependent on the pre-training resources. Therefore, language models (LMs) often struggle with low-resource languages in both training and evaluation. Recently, there has been a growing trend in developing and adopting LMs for low-resource languages. This special issue aims to provide a forum for researchers to share and discuss their ongoing work on LMs for low-resource languages.</p>
+      <!--<h2 id="anti-harassment-policy"><strong>Anti-Harassment Policy</strong></h2>-->
+<!--<hr />-->
+<!--<p>EMNLP adheres to the <a href="https://www.aclweb.org/adminwiki/index.php?title=Anti-Harassment_Policy">ACL Anti-Harassment Policy</a>. Any participant who experiences harassment or hostile behaviour may contact any current member of the <a href="https://www.aclweb.org/adminwiki/index.php/Professional_Conduct_Committee">ACL Professional Conduct Committee</a>. Please be assured that if you approach us, your concerns will be kept in strict confidence, and we will consult with you on any actions taken.</p>-->
+
+    <h4>Topics</h4>
+
+      <p>   We invite submissions on a broad range of topics related to the development and evaluation of neural language models for low-resource languages, including but not limited to the following. </p>
+
+      <ul>
+        <li> Building language models for low-resource languages. </li>
+        <li> Adapting/extending existing language models/large language models for low-resource languages. </li>
+<li> Corpora creation and curation technologies for training language models/large language models for low-resource languages. </li>
+<li> Benchmarks to evaluate language models/large language models in low-resource languages. </li>
+<li> Prompting/in-context learning strategies for low-resource languages with large language models. </li>
+<li> Review of available corpora to train/fine-tune language models/large language models for low-resource languages. </li>
+<li> Multilingual/cross-lingual language models/large language models for low-resource languages. </li>
+<li> Applications of language models/large language models for low-resource languages (i.e. machine translation, chatbots, content moderation, etc. </li>
+
+          </ul>
+
+        <h4>Submission</h4>
+        <p> Submissions should be formatted according to the journal guidelines available <a href="https://www.cambridge.org/core/journals/natural-language-processing/information/author-instructions/preparing-your-materials"> here </a> and submitted through the <a href="https://mc.manuscriptcentral.com/nlp"> manuscript submission system </a>.
+
+To ensure your manuscript is considered for this special issue, please select “Language Models for Low-Resource Languages” under Special Issue Designation when uploading your manuscript.</p>
+
+   <h3 id="organizers">Guest Editors</h3>
+                <table class="organizer-table">
+                    <tr>
+                        <td>
+                            <img src="images/hansi.jfif" alt="Hansi Hettiarachchi" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px"><a
+                                        href="https://www.lancaster.ac.uk/sci-tech/about-us/people/hansi-hettiarachchi">Hansi
+                                    Hettiarachchi</a></p>
+                                <p class="organizer-university">Lancaster University, UK</p>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/tharindu.jfif" alt="Tharindu Ranasinghe" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px"><a href="https://tharindu.co.uk/">Tharindu Ranasinghe</a></p>
+                                <p class="organizer-university">Lancaster University, UK</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/paul.png" alt="Paul Rayson" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px"><a href="https://www.lancaster.ac.uk/lira/people/paul-rayson">Paul
+                                    Rayson</a></p>
+                                <p class="organizer-university">Lancaster University, UK</p>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/ruslan.jpg" alt="Ruslan Mitkov" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px"><a href="https://wp.lancs.ac.uk/mitkov/">Ruslan Mitkov</a></p>
+                                <p class="organizer-university">Lancaster University, UK</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/gaber.jfif" alt="Mohamed Gaber" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px"><a href="https://mohamedmgaber.weebly.com/">Mohamed Gaber</a>
+                                </p>
+                                <p class="organizer-university">Queensland University of Technology, <br> Australia</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+        <h3 id="program-committee">Guest Editorial Board</h3>
+
+        <ul>
+            <li> Gábor Bella - IMT Atlantique, France </li>
+            <li>Ana-Maria Bucur - University of Bucharest, Romania </li>
+        <li> Çağrı Çöltekin - University of Tübingen, Germany </li>
+            <li> Vera Danilova - Uppsala University, Sweden </li>
+            <li> Ona de Gibert - University of Helsinki, Finland </li>
+<li> Ignatius Ezeani - Lancaster University, UK </li>
+<li> Amal Htait - Aston University, UK </li>
+<li> Ali Hürriyetoğlu - Wageningen University & Research, Netherlands </li>
+            <li>Danka Jokic - University of Belgrade, Serbia </li>
+            <li>Diptesh Kanojia - University of Surrey, UK</li>
+            <li>Taro Watanabe - Nara Institute of Science and Technology, Japan</li>
+
+<li> Muhidin Mohamed - Aston University, UK </li>
+            <li>Alistair Plum - University of Luxembourg, Luxembourg</li>
+            <li> Damith Premasiri - Lancaster University, UK </li>
+            <li> Guokan Shang - Mohamed bin Zayed University of Artificial Intelligence, France</li>
+            <li>Ravi Shekhar - University of Essex, UK</li>
+          </ul>
+
+   <h4> References</h4>
+        <p id="blasi-2022"> Damian Blasi, Antonios Anastasopoulos, and Graham Neubig. 2022. Systematic inequalities in language technology performance across the world’s
+languages. In <i> Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics
+(Volume 1: Long Papers) </i>, pages 5486–5505, Dublin,
+Ireland. Association for Computational Linguistics</p>
+      <p id="magueresse-2020"> Alexandre Magueresse, Vincent Carles, and Evan Heet-
+derks. 2020. Low-resource languages: A review
+of past work and future challenges. <i> arXiv preprint
+arXiv:2006.07264. </i> </p>
+        <p id="minaee-2024"> Shervin Minaee, Tomas Mikolov, Narjes Nikzad,
+Meysam Chenaghlu, Richard Socher, Xavier Amatriain, and Jianfeng Gao. 2024. Large language
+models: A survey. <i> arXiv preprint arXiv:2402.06196. </i> </p>
+        <p id="ruder-2022"> Sebastian Ruder, Ivan Vulic, and Anders Søgaard. ´
+2022. Square one bias in NLP: Towards a multidimensional exploration of the research manifold.
+In <i> Findings of the Association for Computational
+Linguistics: ACL 2022 </i>, pages 2340–2354, Dublin,
+Ireland. Association for Computational Linguistics.
+</p>
+        <p id="touvron-2024"> Hugo Touvron, Louis Martin, Kevin Stone, Peter Albert, Amjad Almahairi, Yasmine Babaei, Nikolay
+Bashlykov, Soumya Batra, Prajjwal Bhargava, Shruti
+Bhosale, et al. 2023. Llama 2: Open foundation and fine-tuned chat models. <i> arXiv preprint
+arXiv:2307.09288 </i> </p>
+      <p id="van-esch-2022"> Daan van Esch, Tamar Lucassen, Sebastian Ruder, Isaac
+Caswell, and Clara Rivera. 2022. Writing system and
+speaker metadata for 2,800+ language varieties. In
+<i> Proceedings of the Thirteenth Language Resources
+and Evaluation Conference </i>, pages 5035–5046, Marseille, France. European Language Resources Association </p>
+
+      <h3>Contact us</h3>
+      <p> Stay in touch to receive updates about LoResLM 2025</p>
+       <a href="https://x.com/LoResLM2025" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/X_logo.jpg" alt="X logo" width="30" height="30">
+        </a>
+
+      <a href="mailto:loreslm2025@gmail.com">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail logo" width="30" height="30">
+        </a>
+
+      <footer class="site-footer">
+<center>
+<!--<a href="mailto:"><i class="svg-icon-email"></i></a>
+
+<a href="https://github.com/"><i class="svg-icon-github"></i></a>
+<a href="https://www.twitter.com/"><i class="svg-icon-twitter"></i></a>
+-->
+</center>
+</footer>
+
+
+    </section>
+
+  </body>
+</html>
