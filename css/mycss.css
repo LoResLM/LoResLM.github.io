@@ -1,19 +1,19 @@
-/*.nav-item {*/
-/*  position: relative;*/
-/*}*/
+.nav-item {
+  position: relative;
+}
 
-/*.dropdown-menu {*/
-/*  display: none;*/
-/*  position: absolute;*/
-/*  top: 100%;*/
-/*  left: 0;*/
-/*  background-color: white;*/
-/*  border: 1px solid #ddd;*/
-/*  padding: 5px 0;*/
-/*  min-width: 150px;*/
-/*  list-style-type: none;*/
-/*  margin: 0;*/
-/*}*/
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 5px 0;
+  min-width: 150px;
+  list-style-type: none;
+  margin: 0;
+}
 
 .dropdown-menu li {
   padding: 0;
@@ -31,9 +31,9 @@
   background-color: #f1f1f1;
 }
 
-/*.nav-item:hover .dropdown-menu {*/
-/*  display: block;*/
-/*}*/
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
 
 
 .banner {
@@ -129,89 +129,13 @@
 }
 
 /* Submenu positioning */
-/*.dropdown-submenu .dropdown-menu {*/
-/*  top: 0;*/
-/*  left: 100%;*/
-/*  margin-left: 0.1rem;*/
-/*}*/
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: 0.1rem;
+}
 
 /* Ensure it appears on hover (optional if using click) */
-/*.dropdown-submenu:hover > .dropdown-menu {*/
-/*  display: block;*/
-/*}*/
-
-/* Nested dropdown styles */
-.dropdown-submenu {
-    position: relative;
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
 }
-
-/* Add arrow indicator for nested items */
-.dropdown-submenu > a.dropdown-toggle::after {
-    content: "›";
-    font-size: 1.5em;
-    border: none;
-    transform: rotate(0deg);
-    margin-left: auto;
-    float: right;
-    line-height: 1;
-    vertical-align: middle;
-    position: relative;
-    top: -2px;
-}
-
-.dropdown-submenu > a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Position submenu to the right on desktop */
-/*@media (min-width: 992px) {*/
-/*    .dropdown-submenu .dropdown-menu {*/
-/*        top: 0;*/
-/*        left: 100%;*/
-/*        margin-top: 0;*/
-/*        margin-left: 0.1rem;*/
-/*    }*/
-
-/*    !* Show submenu on hover - desktop only *!*/
-/*    .dropdown-submenu:hover > .dropdown-menu {*/
-/*        display: block;*/
-/*    }*/
-/*}*/
-
-/* Position submenu below on mobile */
-@media (max-width: 991px) {
-    .dropdown-submenu .dropdown-menu {
-        position: static;
-        float: none;
-        margin-left: 1rem;
-        box-shadow: none;
-        border-left: 2px solid #dee2e6;
-    }
-
-    .dropdown-submenu > a.dropdown-toggle::after {
-        content: "▾";
-    }
-}
-
-/* Add hover effect */
-.dropdown-submenu:hover > a {
-    background-color: #f8f9fa;
-}
-
-/* Ensure Bootstrap's dropdown behavior works */
-.dropdown-menu {
-    display: none;
-}
-
-.dropdown-menu.show {
-    display: block;
-}
-
-/* Keep your existing navbar spacing */
-.navbar-nav > li.nav-item > a.nav-link {
-    white-space: nowrap;
-    padding-right: 1rem;
-}
-
