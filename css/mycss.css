@@ -47,6 +47,13 @@
   height: auto;
 }
 
+/* Page Header Banner - Zoomed Out to Show Full Image */
+.page-header {
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
 /* Dropdown */
 .dropdown {
   position: relative;
@@ -214,4 +221,3 @@
     white-space: nowrap;
     padding-right: 1rem;
 }
-
