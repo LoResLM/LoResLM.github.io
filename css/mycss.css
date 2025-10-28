@@ -15,6 +15,15 @@
 /*  margin: 0;*/
 /*}*/
 
+.page-header {
+  color: black;
+}
+
+/* Or target specific elements */
+.project-name,
+.project-tagline {
+  color: black;
+}
 
 .dropdown-menu li {
   padding: 0;
