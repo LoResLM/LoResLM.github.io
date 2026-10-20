@@ -1,0 +1,141 @@
+.nav-item {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 5px 0;
+  min-width: 150px;
+  list-style-type: none;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 5px 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f1f1f1;
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+
+.banner {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.banner img {
+  width: 100%; /* Adjust this value to control the width of the banner image */
+  height: auto;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .btn {
+  background-color: #3e8e41;
+}
+
+ .organizer-table {
+   width: 100%;
+   margin-bottom: 20px; /* Added for spacing */
+   border-collapse: collapse; /* Collapse table borders */
+ }
+
+.organizer-table td, .organizer-table th {
+  padding: 10px;
+  vertical-align: top;
+  border: none; /* Remove borders on table cells */
+}
+
+.organizer-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.organizer-name {
+  font-weight: bold;
+}
+
+.organizer-university {
+  font-style: italic;
+}
+
+/* Added styles for side table wrapper */
+#side-table-wrapper {
+  width: 310px;
+  font-size: small;
+  float: right; /* Aligns to the right */
+}
+
+#side-table-wrapper h4 {
+  margin-bottom: 10px;
+}
+
+#important-dates {
+  width: 100%;
+}
+
+.navbar-nav > li.nav-item > a.nav-link {
+  white-space: nowrap;
+  padding-right: 1rem;
+}
+
+/* Submenu positioning */
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: 0.1rem;
+}
+
+/* Ensure it appears on hover (optional if using click) */
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}

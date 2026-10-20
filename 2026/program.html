@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <title>The Second Workshop on Language Models for Low-Resource Languages</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/2026/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/2026/css/cayman.css">
+  <link rel="stylesheet" href="/2026/css/mycss.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+
+      <!-- jQuery FIRST -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+      <!-- Popper.js (required by Bootstrap 5) -->
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+      <script src="/2026/assets/js/dropdown.js"></script>
+</head>
+
+
+  <body>
+    <nav id="navbarID" class="navbar sticky-top navbar-expand-lg navbar-light bg-light navbar-static-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+       <img src="/favicon.ico" alt="logo" width="6%" height="6%">
+      <b>LoResLM @ EACL 2026</b>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <!-- Home -->
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/" id="home"><b>Home</b></a>
+            </li>
+
+            <!-- Workshop Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="workshopDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <b>Workshop</b>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="workshopDropdown">
+                    <!-- 2027 Nested Dropdown -->
+                    <li class="dropdown-submenu position-relative">
+                        <a class="dropdown-item dropdown-toggle" href="#">2027 @EACL</a>
+                        <ul class="dropdown-menu start-100 top-0 mt-0">
+                            <li><a class="dropdown-item" href="/home">Home</a></li>
+                            <li><a class="dropdown-item" href="/program">Programme</a></li>
+                            <li><a class="dropdown-item" href="/cfp">CFP</a></li>
+                            <li><a class="dropdown-item" href="/organizers">Organisers</a></li>
+                            <li><a class="dropdown-item" href="/sponsors">Sponsors</a></li>
+                            <li><a class="dropdown-item" href="/contact">Contact</a></li>
+                        </ul>
+                    </li>
+                    <!-- 2026 Nested Dropdown -->
+                    <li class="dropdown-submenu position-relative">
+                        <a class="dropdown-item dropdown-toggle" href="#">2026 @EACL</a>
+                        <ul class="dropdown-menu start-100 top-0 mt-0">
+                            <li><a class="dropdown-item" href="/2026/home">Home</a></li>
+                            <li><a class="dropdown-item" href="/2026/program">Programme</a></li>
+                            <li><a class="dropdown-item" href="/2026/cfp">CFP</a></li>
+                            <li><a class="dropdown-item" href="/2026/organizers">Organisers</a></li>
+                            <li><a class="dropdown-item" href="/2026/sponsors">Sponsors</a></li>
+                            <li><a class="dropdown-item" href="/2026/contact">Contact</a></li>
+                        </ul>
+                    </li>
+                    <!-- 2025 Nested Dropdown -->
+                    <li class="dropdown-submenu position-relative">
+                        <a class="dropdown-item dropdown-toggle" href="#">2025 @COLING</a>
+                        <ul class="dropdown-menu start-100 top-0 mt-0">
+                            <li><a class="dropdown-item" href="/2025/home.html">Home</a></li>
+                            <li><a class="dropdown-item" href="/2025/program.html">Programme</a></li>
+                            <li><a class="dropdown-item" href="/2025/cfp.html">CFP</a></li>
+                            <li><a class="dropdown-item" href="/2025/organizers.html">Organisers</a></li>
+                            <li><a class="dropdown-item" href="/2025/sponsors.html">Sponsors</a></li>
+                            <li><a class="dropdown-item" href="/2025/contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Special Issue -->
+            <li class="nav-item">
+                <a class="nav-link" href="/specialissue"><b>Special Issue</b></a>
+            </li>
+        </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="page-header">
+    <h1 class="project-name">The Second Workshop on Language Models for <br> Low-Resource Languages</h1>
+    <h2 class="project-tagline">Building Bridges through NLP Innovation:<br>Empowering Linguistic Diversity by Crafting
+        Language Models for Low-Resource Languages </h2>
+    <h3 class="project-tagline">Rabat, Morocco</h3>
+
+</section>
+
+
+    <section class="main-content">
+      <div id="side-table-wrapper" style="float:right; width:310px; font-size: small">
+
+       <h4 id="side-table-header">Important Dates</h4>
+        <table id="important-dates" class="table">
+                        <tbody>
+                        <tr>
+                            <td>Paper submission due</td>
+                            <td> January 6 (Tue), 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Notification of acceptance</td>
+                            <td> January 28 (Wed), 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Camera-ready due</td>
+                            <td> February 3 (Tue), 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Workshop</td>
+                            <td>March 29, 2026 co-located with <a href="https://2026.eacl.org/"
+                                                                      target="_blank">EACL 2026</a></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><small>* These dates are approximate dates based on EACL 2026 and are
+                                subject to changes.</small></td>
+                        </tr>
+                        </tbody>
+                    </table>
+          </font><br>
+
+
+      </div>
+      <!-- ===================================== -->
+      <h2 style="color: #a61717">Programme</h2>
+
+
+<h4 id="0930---1030-poster-session-i">09:30 - 10:30 Poster Session I: Linguistic Analysis and Language Structure</h4>
+<ul>
+  <li><strong>Session Chairs: TBA</strong>
+    <ul>
+      <li><strong>When Multilingual Evaluation Assumptions Fail: Tokenization Effects Across Scripts</strong><br />
+Manodnya K H and Luc De Nardi</li>
+      <li><strong>Learning from Scarcity: Building and Benchmarking Speech Technology for Sukuma</strong><br />
+Macton Mgonzo, Kezia Oketch, Naome A Etori, Winnie Mang'eni, Elizabeth Fabian Nyaki and Michael Samwel Mollel</li>
+      <li><strong>Evaluating Large Language Models on Lithuanian Grammatical Cases</strong><br />
+Urtė Jakubauskaitė and Raquel G. Alhama</li>
+      <li><strong>Tokenization and Morphological Fidelity in Uralic NLP: A Cross-Lingual Evaluation</strong><br />
+Nuo Xu and Ahrii Kim</li>
+      <li><strong>Out-Of-Tune rather than Fine-Tuned: How Pre-training, Fine-tuning and Tokenization Affect Semantic Similarity in a Historical, Non-Standardized Domain</strong><br />
+Stella Verkijk and Piek Vossen</li>
+      <li><strong>LuxDiagRC: A Diagnostic Reading Comprehension Corpus for Luxembourgish with Linguistic and Cognitive Annotation Layers</strong><br />
+Christophe Friezas Gonçalves, Salima Lamsiyah and Christoph Schommer</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="1030---1100-coffee-break">10:30 - 11:00 Coffee Break</h4>
+
+<h4 id="1100---1200-poster-session-ii">11:00 - 12:00 Poster Session II: Language Modelling and NLP Applications</h4>
+<ul>
+  <li><strong>Session Chairs: TBA</strong>
+    <ul>
+      <li><strong>To make someone do something: mining alert-style directives in Bulgarian social media for low-resource language modelling</strong><br />
+Ruslana Margova and Stanislav Penkov</li>
+      <li><strong>Improving Romanian LLM Pretraining Data using Diversity and Quality Filtering</strong><br />
+Vlad-Andrei Negoiță, Mihai Masala and Traian Rebedea</li>
+      <li><strong>LLM-as-a-Judge for Low-Resource Languages: Adapting Ragas and Comparative Ranking for Romanian</strong><br />
+Claudiu Creanga and Liviu P Dinu</li>
+      <li><strong>When LLMs Annotate: Reliability Challenges in Low-Resource NLI</strong><br />
+Solmaz Panahi, John Kelleher and Vasudevan Nedumpozhimana</li>
+      <li><strong>Cross-Lingual Emotion Recognition in Balinese Text using Multilingual-LLMs under Peer-Collaborations Settings</strong><br />
+Putu Kussa Laksana Utama, Tsegaye Misikir Tashu and Jilles Steeve Dibangoye</li>
+      <li><strong>"We Are (Language) Family": Adapting Transformer models to related minority languages with linguistic data</strong><br />
+Miguel López-Otal and Jorge Gracia</li>
+      <li><strong>Tracking the evolution of LLM capabilities for Belarusian with OpenAI Evals</strong><br />
+Vladislav Poritski, Oksana Volchek, Maksim Aparovich, Volha Harytskaya and Pavel Smrz</li>
+      <li><strong>Representation-Aware Prompting for Zero-Shot Marathi Text Classification: IPA, Romanization, Repetition</strong><br />
+Van-Hien Tran, Huy Hien Vu, Hideki Tanaka and Masao Utiyama</li>
+      <li><strong>KyrText: A Multi-Domain Large-Scale Corpus for Kyrgyz Language</strong><br />
+Tilek Chubakov</li>
+      <li><strong>Pretraining and Benchmarking Modern Encoders for Latvian</strong><br />
+Arturs Znotins</li>
+      <li><strong>UrHiOdSynth: A Multilingual Synthetic Corpus for Speech-to-Speech Translation in Low-Resource Indic Languages</strong><br />
+Jamaluddin, Subhankar Panda, Aditya Narendra, Kamanksha Prasad Dubey and Mohammad Nadeem</li>
+      <li><strong>Parameter-Efficient Quality Estimation via Frozen Recursive Models</strong><br />
+Umar Abubacar, Roman Bauer and Diptesh Kanojia</li>
+      <li><strong>Neural Machine Translation for French–Mooré: Adapting Large Language Models to Low-Resource Languages</strong><br />
+Walker Stanislas Rocksane Compaore, Maimouna Ouattara, Rodrique Kafando, Tegawendé F. Bissyandé, Abdoul Kader Kabore and Aminata Sabane</li>
+      <li><strong>Contributing to Speech-to-Speech Translation for African Low-Resource Languages: Study of French-Mooré Pair</strong><br />
+Soutongnoma Alex Fayçal Ouedraogo, Maimouna Ouattara, Rodrique Kafando, Abdoul Kader Kabore, Aminata Sabane and Tegawendé F. Bissyandé</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="0930---1200-virtual-poster-session">09:30 - 12:00 Virtual Poster Session</h4>
+<ul>
+  <li><strong>Session Chairs: TBA</strong>
+    <ul>
+      <li><strong>NE-BERT: A Multilingual Language Model for Nine Northeast Indian Languages</strong><br />
+Badal Nyalang</li>
+        <li><strong>Competence Collapse in Code-Mixed Generation: Spectral Evidence and Mechanistic Recovery via Cross-Lingual Activation Steering</strong><br />
+Tanushree Ravindra Pratap Yadav</li>
+      <li><strong>Do Tokenizers Fail on Informal Hindi Expressions? Evidence from Static, Downstream, and Robustness Analyses</strong><br />
+Manikandan Ravikiran, Tanmay Tiwari, Vibhu Gupta, Rakesh Prakash, Rohit Saluja and Shayan Mohanty</li>
+      <li><strong>Making Large Language Models Speak Tulu: Structured Prompting for an Extremely Low-Resource Language</strong><br />
+Prathamesh Devadiga and Paras Chopra</li>
+      <li><strong>BanglaLlama: LLaMA for Bangla Language</strong><br />
+Abdullah Khan Zehady, Shubhashis Roy Dipta, Naymul Islam, Safi Al Mamun and Santu Karmaker</li>
+      <li><strong>Evaluating Retrieval-Augmented Generation for Medication Question Answering on Nigerian Drug Labels in Yorùbá</strong><br />
+Zainab Tairu and Aramide Adebesin</li>
+      <li><strong>Quantifying Cross-Lingual Interference: Algorithmic Standardization of Kamtapuri in Large Language Models</strong><br />
+Roumak Das</li>
+      <li><strong>SinhaLegal: A Benchmark Corpus for Information Extraction and Analysis in Sinhala Legislative Texts</strong><br />
+Minduli Lasandi and Nevidu Jayatilleke</li>
+      <li><strong>BanglaIPA: Towards Robust Text-to-IPA Transcription with Contextual Rewriting in Bengali</strong><br />
+Jakir Hasan, Shrestha Datta, Md Saiful Islam, Shubhashis Roy Dipta and Ameya Debnath</li>
+      <li><strong>Tone in Yoruba ASR: Evaluating the Impact of Tone Recognition on Transformer-Based ASR Models</strong><br />
+Joy Olusanya</li>
+      <li><strong>QARI: Neural Architecture for Urdu Extractive Machine Reading Comprehension</strong><br />
+Samreen Kazi and Shakeel Ahmed Khoja</li>
+      <li><strong>Anchoring the Judge: Curriculum-Based Adaptation and Reference-Anchored MQM for LLM-Based Machine Translation of an Unseen Low-Resource Language - A Case of Nupe</strong><br />
+Umar Baba Umar, Sulaimon Adebayo Bashir and Mohammed Danlami Abdulmalik</li>
+      <li><strong>"So, How Much Do LLMs Hallucinate on Low-Resource Languages?" A Quantitative and Qualitative Analysis</strong><br />
+Kushal Trivedi, Murtuza Shaikh and Sriyansh Sharma</li>
+      <li><strong>A Comprehensive Evaluation of Chain-of-Thought Faithfulness in Persian Classification Tasks</strong><br />
+Shakib Yazdani, Cristina España-Bonet, Eleftherios Avramidis, Yasser Hamidullah and Josef van Genabith</li>
+      <li><strong>Under-resourced studies of under-resourced languages: lemmatization and POS-tagging with LLM annotators for historical Armenian, Georgian, Greek and Syriac</strong><br />
+Chahan Vidal-Gorène, Bastien Kindt and Florian Cafiero</li>
+      <li><strong>Large Language Models for Mental Health: A Multilingual Evaluation</strong><br />
+Nishat Raihan, Sadiya Sayara Chowdhury Puspo, Ana-Maria Bucur, Stevie Chancellor and Marcos Zampieri</li>
+      <li><strong>Serbian SuperGLUE: Towards an Evaluation Benchmark for South Slavic Language Models</strong><br />
+Mitar Perovic and Teodora Mihajlov</li>
+      <li><strong>Less is More: Adapting Text Embeddings for Low-Resource Languages with Small Scale Noisy Synthetic Data</strong><br />
+Zaruhi Navasardyan, Bagratuni Minsayan, Spartak Bughdaryan and Hrant Davtyan</li>
+      <li><strong>Beyond Many-Shot Translation: Scaling In‑Context Demonstrations For Low‑Resource Machine Translation</strong><br />
+Luis Frentzen Salim, Esteban Carlin, Alexandre Morinvil, Xi Ai and Lun-Wei Ku</li>
+      <li><strong>Escaping the Probability Trap: Mitigating Semantic Drift in Cantonese-Mandarin Translation</strong><br />
+Yuzhi Liang and Fangqi Chen</li>
+      <li><strong>How multilingual are multilingual LLMs? A case study in Northern Sámi-Finnish Translation</strong><br />
+Jonne Sälevä and Constantine Lignos</li>
+      <li><strong>Hebrew Diacritics Restoration using Visual Representation</strong><br />
+Yair Elboher and Yuval Pinter</li>
+      <li><strong>MTQE.en-he: Machine Translation Quality Estimation for English-Hebrew</strong><br />
+Andy Rosenbaum, Assaf Siani and Ilan Kernerman</li>
+      <li><strong>Tokenization Cost, Retention, and Orthography Robustness for Ladin and Italian Varieties</strong><br />
+Alessio Staffini</li>
+      <li><strong>BanglaSummEval: Reference-Free Factual Consistency Evaluation for Bangla Summarization</strong><br />
+Ahmed Rafid, Rumman Adib, Fariya Ahmed, Ajwad Abrar and Mohammed Saidul Islam</li>
+      <li><strong>Domain-Specific Quality Estimation for Machine Translation in Low-Resource Scenarios</strong><br />
+Namrata Bhalchandra Patil Gurav, Akashdeep Ranu, Archchana Sindhujan and Diptesh Kanojia</li>
+        <li><strong>TeluguEval: A Comprehensive Benchmark for Evaluating LLM Capabilities in Telugu</strong><br />
+Revanth Kumar Gundam and Radhika Mamidi</li>
+        <li><strong>MaiBERT: A Pre-training Corpus and Language Model for Low-Resourced Maithili Language</strong><br />
+Sumit Yadav, Raju Kumar Yadav, Utsav Maskey, Gautam Siddharth Kashyap, Ganesh Gautam and Usman Naseem</li>
+        <li>     <strong>The Indonesian Religiolect Corpus: Data Curation for Muslim, Protestant, and Catholic Language Varieties</strong><br />
+Dan Sachs </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="1200---1400-lunch-break">12:00 - 14:00 Lunch Break</h4>
+
+<h4 id="1400---1500-keynote-speech">14:00 - 15:00 Keynote Speech - Beyond the standard: NLP for low-resource language varieties </h4>
+
+<ul>
+  <li><strong>Speaker:</strong> <a href="https://bplank.github.io/">Prof. Barbara Plank</a></li>
+</ul>
+
+<h4 id="1500---1530-oral-session-i">15:00 - 15:30 Oral Session I: Syntactic Analysis in the Era of Language Models</h4>
+<ul>
+  <li><strong>Session Chairs: TBA</strong>
+    <ul>
+      <li><strong>15:00 - 15:15: Cross-Lingual and Cross-Domain Transfer Learning for POS Tagging in Historical Germanic Low-Resource Languages</strong><br />
+Irene Miani, Sara Stymne and Gregory R. Darwin</li>
+      <li><strong>15:15 - 15:30: Targeted Syntactic Evaluation of Language Models on Georgian Case Alignment</strong><br />
+Daniel Gallagher and Gerhard Heyer</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="1530---1600-coffee-break">15:30 - 16:00 Coffee Break</h3>
+
+<h3 id="1600---1700-oral-session-ii">16:00 - 17:00 Oral Session II: Language Modelling and Applications</h3>
+<ul>
+  <li><strong>Session Chairs: TBA</strong>
+    <ul>
+      <li><strong>16:00 - 16:15: Qomhrá: A Bilingual Irish and English Large Language Model</strong><br />
+Joseph McInerney, Khanh-Tung Tran, Liam Lonergan, Neasa Ní Chiaráin, Ailbhe Ni Chasaide and Barry Devereux</li>
+      <li><strong>16:15 - 16:30: Bootstrapping Embeddings for Low Resource Languages</strong><br />
+Merve Basoz, Andrew Horne and Mattia Opper</li>
+      <li><strong>16:30 - 16:45: Enabling Structured Reasoning in Sindhi with Culturally Grounded Instruction Tuning</strong><br />
+Mehak Mehak, Kamyar Zeinalipour, Pireh Soomro, Cristiano Chesi, Marco Gori and Marco Maggini</li>
+      <li><strong>16:45 - 17:00: Grammatical Error Correction for Low-Resource Languages: The Case of Zarma</strong><br />
+Mamadou K. Keita, Marcos Zampieri, Christopher M Homan, Adwoa Asantewaa Bremang, Dennis Asamoah Owusu and Huy Le</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="1700---1715-overview">17:00 - 17:15 Overview: LoResLM 2026</h3>
+<h3 id="1715---1730-awards-and-closing-remarks">17:15 - 17:30 Awards and Closing Remarks</h3>
+
+
+      <footer class="site-footer">
+<center>
+</center>
+</footer>
+
+
+    </section>
+
+  </body>
+</html>

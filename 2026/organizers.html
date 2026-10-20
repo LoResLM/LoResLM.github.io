@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Second Workshop on Language Models for Low-Resource Languages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="/2026/css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/2026/css/cayman.css">
+    <link rel="stylesheet" href="/2026/css/mycss.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+            integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+            crossorigin="anonymous"></script>
+    <!-- jQuery FIRST -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Popper.js (required by Bootstrap 5) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script src="/2026/assets/js/dropdown.js"></script>
+</head>
+
+
+<body>
+<nav id="navbarID" class="navbar sticky-top navbar-expand-lg navbar-light bg-light navbar-static-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src="/favicon.ico" alt="logo" width="6%" height="6%">
+            <b>LoResLM @ EACL 2026</b>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <!-- Home -->
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/" id="home"><b>Home</b></a>
+                </li>
+
+                <!-- Workshop Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="workshopDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <b>Workshop</b>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="workshopDropdown">
+                    <!-- 2027 Nested Dropdown -->
+                    <li class="dropdown-submenu position-relative">
+                        <a class="dropdown-item dropdown-toggle" href="#">2027 @EACL</a>
+                        <ul class="dropdown-menu start-100 top-0 mt-0">
+                            <li><a class="dropdown-item" href="/home">Home</a></li>
+                            <li><a class="dropdown-item" href="/program">Programme</a></li>
+                            <li><a class="dropdown-item" href="/cfp">CFP</a></li>
+                            <li><a class="dropdown-item" href="/organizers">Organisers</a></li>
+                            <li><a class="dropdown-item" href="/sponsors">Sponsors</a></li>
+                            <li><a class="dropdown-item" href="/contact">Contact</a></li>
+                        </ul>
+                    </li>
+                    <!-- 2026 Nested Dropdown -->
+                    <li class="dropdown-submenu position-relative">
+                        <a class="dropdown-item dropdown-toggle" href="#">2026 @EACL</a>
+                        <ul class="dropdown-menu start-100 top-0 mt-0">
+                            <li><a class="dropdown-item" href="/2026/home">Home</a></li>
+                            <li><a class="dropdown-item" href="/2026/program">Programme</a></li>
+                            <li><a class="dropdown-item" href="/2026/cfp">CFP</a></li>
+                            <li><a class="dropdown-item" href="/2026/organizers">Organisers</a></li>
+                            <li><a class="dropdown-item" href="/2026/sponsors">Sponsors</a></li>
+                            <li><a class="dropdown-item" href="/2026/contact">Contact</a></li>
+                        </ul>
+                    </li>
+                        <!-- 2025 Nested Dropdown -->
+                        <li class="dropdown-submenu position-relative">
+                            <a class="dropdown-item dropdown-toggle" href="#">2025 @COLING</a>
+                            <ul class="dropdown-menu start-100 top-0 mt-0">
+                                <li><a class="dropdown-item" href="/2025/home.html">Home</a></li>
+                                <li><a class="dropdown-item" href="/2025/program.html">Programme</a></li>
+                                <li><a class="dropdown-item" href="/2025/cfp.html">CFP</a></li>
+                                <li><a class="dropdown-item" href="/2025/organizers.html">Organisers</a></li>
+                                <li><a class="dropdown-item" href="/2025/sponsors.html">Sponsors</a></li>
+                                <li><a class="dropdown-item" href="/2025/contact.html">Contact</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Special Issue -->
+                <li class="nav-item">
+                <a class="nav-link" href="/specialissue"><b>Special Issue</b></a>
+            </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="page-header">
+    <h1 class="project-name">The Second Workshop on Language Models for <br> Low-Resource Languages</h1>
+    <h2 class="project-tagline">Building Bridges through NLP Innovation:<br>Empowering Linguistic Diversity by Crafting
+        Language Models for Low-Resource Languages </h2>
+    <h3 class="project-tagline">Morocco, Rabat</h3>
+
+</section>
+
+
+<section class="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h3 id="organizers">Organising Committee</h3>
+                <table class="organizer-table">
+                    <tr>
+                        <td>
+                            <img src="images/hansi.jfif" alt="Hansi Hettiarachchi" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px"><a
+                                        href="https://www.lancaster.ac.uk/sci-tech/about-us/people/hansi-hettiarachchi">Hansi
+                                    Hettiarachchi</a></p>
+                                <p class="organizer-university">Lancaster University, UK</p>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/tharindu.jfif" alt="Tharindu Ranasinghe" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px"><a href="https://tharindu.co.uk/">Tharindu Ranasinghe</a></p>
+                                <p class="organizer-university">Lancaster University, UK</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/alistair.png" alt="Alistair Plum" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px"><a href="https://www.uni.lu/fhse-en/people/alistair-plum/">Alistair Plum</a></p>
+                                <p class="organizer-university">University of Luxembourg, Luxembourg</p>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/damith.jpg" alt="Damith Premasiri" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px">Damith Premasiri</p>
+                                <p class="organizer-university">Lancaster University, UK</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/fiona.jfif" alt="Fiona Anting Tan" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px"><a href="https://tanfiona.github.io/">Fiona Anting Tan</a></p>
+                                <p class="organizer-university">National University of Singapore, Singapore</p>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/lasitha.jfif" alt="Lasitha Uyangodage" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px">Lasitha Uyangodage</p>
+                                <p class="organizer-university">University of Münster, Germany</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <h3 id="advisors">Advisors</h3>
+                <table class="organizer-table">
+                    <tr>
+                        <td>
+                            <img src="images/paul.png" alt="Paul Rayson" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px"><a href="https://www.lancaster.ac.uk/lira/people/paul-rayson">Paul
+                                    Rayson</a></p>
+                                <p class="organizer-university">Lancaster University, UK</p>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="images/ruslan.jpg" alt="Ruslan Mitkov" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px"><a href="https://wp.lancs.ac.uk/mitkov/">Ruslan Mitkov</a></p>
+                                <p class="organizer-university">Lancaster University, UK</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/gaber.jfif" alt="Mohamed Gaber" class="organizer-photo">
+                            <div>
+                                <p class="organizer-name" style="margin-bottom: 0px"><a href="https://mohamedmgaber.weebly.com/">Mohamed Gaber</a>
+                                </p>
+                                <p class="organizer-university">Birmingham City University, UK</p>
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+
+                <h3 id="program-committee">Programme Committee</h3>
+
+                <ul>
+<li>David Ifeoluwa Adelani - McGill University, Canada</li>
+<li>Godfred Agyapong - University of Florida, USA</li>
+<li>Wafa Aissa - Université Catholique de Louvain (UCLouvain), Belgium</li>
+<li>Sergi Alvarez-Vidal - Universitat Autònoma de Barcelona, Spain</li>
+<li>Isuri Nanomi Arachchige - Lancaster University, United Kingdom</li>
+<li>Valerio Basile - University of Turin, Italy</li>
+<li>Laura Bernardy - University of Luxembourg, Luxembourg</li>
+<li>Necva Bölücü - CSIRO, Australia</li>
+<li>Claudia Borg - University of Malta, Malta</li>
+<li>Pierrette Bouillon - University of Geneva, Switzerland</li>
+<li>Ivana Brač - Institute for the Croatian Language, Croatia/li>
+<li>Eleftheria Briakou - Google, USA</li>
+<li>Ana-Maria Bucur - Università della Svizzera italiana (USI), Switzerland</li>
+<li>Tommaso Caselli - University of Groningen, Netherlands</li>
+<li>Salmane Chafik - Mohammed VI Polytechnic University, Morocco</li>
+<li>Charibeth Ko Cheng - De La Salle University, Philippines</li>
+<li>Cagri Coltekin - University of Tübingen, Germany</li>
+<li>André Coneglian - Universidade Federal de Minas Gerais, Brazil</li>
+<li>Claudiu Creanga - University of Bucharest, Romania</li>
+<li>Sudhansu Bala Das - National University of Ireland, Galway, Ireland</li>
+<li>Ona de Gibert - University of Helsinki, Finland</li>
+<li>Daryna Dementieva - Technical University of Munich, Germany</li>
+<li>Sourabh Deoghare - Indian Institute of Technology Bombay, India</li>
+<li>Alphaeus Dmonte - George Mason University, USA</li>
+<li>Kaja Dobrovoljc - University of Ljubljana & Jozef Stefan Institute, Slovenia</li>
+<li>Bonaventure F. P. Dossou - McGill University, Canada</li>
+<li>Ignatius Ezeani - Lancaster University, United Kingdom</li>
+<li>Francesca Frontini - CNR – Istituto di Linguistica Computazionale "A. Zampolli", Italy</li>
+<li>Anna Beatriz Dimas Furtado - National University of Ireland, Galway, Ireland</li>
+<li>Voula Giouli - Aristotle University of Thessaloniki, Greece</li>
+<li>Le An Ha - Ho Chi Minh City University of Foreign Languages and Information Technology, Vietnam</li>
+<li>Gilberta Hadaj - Albanian University, Albania</li>
+<li>Amal Htait - Aston University, United Kingdom</li>
+<li>Sylvain Kahane - Université Paris Nanterre, France</li>
+<li>Olha Kanishcheva - Friedrich Schiller University Jena, Germany</li>
+<li>Diptesh Kanojia - University of Surrey, United Kingdom</li>
+<li>Tracy Holloway King - Adobe Systems, USA</li>
+<li>Kristina Kocijan - University of Zagreb, Croatia</li>
+<li>Svetla Peneva Koeva - Institute for Bulgarian Language, Bulgarian Academy of Sciences, Bulgaria</li>
+<li>Jaroslav Kopčan - Kempelen Institute of Intelligent Technologies (KInIT), Slovakia</li>
+<li>Sheng Li - Institute of Science Tokyo (Tokyo Institute of Technology), Japan</li>
+<li>Constantine Lignos - Brandeis University, USA</li>
+<li>Francisco Javier Lima Florido - Universidad de Málaga, Spain</li>
+<li>Veronika Lipp - Hungarian Research Centre for Linguistics, Hungary</li>
+<li>Irina Lobzhanidze - Ilia State University, Georgia</li>
+<li>Cedric Lothritz - Luxembourg Institute of Science and Technology (LIST), Luxembourg</li>
+<li>Jason S. Lucas - Pennsylvania State University, USA</li>
+<li>Anne-Marie Lutgen - University of Luxembourg, Luxembourg</li>
+<li>Michał Marcińczuk - Sages, Poland</li>
+<li>Vukosi Marivate - Lelapa AI, South Africa</li>
+<li>Eugenio Martínez-Cámara - Universidad de Jaén, Spain</li>
+<li>Iván Martínez-Murillo - Universidad de Alicante, Spain</li>
+<li>Pruthwik Mishra - Sardar Vallabhbhai National Institute of Technology (SVNIT), India</li>
+<li>Maria Mitrofan - Research Institute for Artificial Intelligence "Mihai Drăgănescu" (RACAI), Romania</li>
+<li>Abiodun Modupe - University of Pretoria, South Africa</li>
+<li>Simon Münker - Universität Trier, Germany</li>
+<li>Agnieszka Mykowiecka - Institute of Computer Science, Polish Academy of Sciences, Poland</li>
+<li>Tadashi Nomoto - National Institute of Japanese Literature, Japan</li>
+<li>Fred Philippy - University of Luxembourg, Luxembourg</li>
+<li>Scott Piao - Lancaster University, United Kingdom</li>
+<li>Damith Premasiri - Lancaster University, United Kingdom</li>
+<li>Nishat Raihan - George Mason University, USA</li>
+<li>Pattabhi R. K. Rao T - AU-KBC Research Centre, Chennai, India</li>
+<li>Paul Rayson - Lancaster University, United Kingdom</li>
+<li>Mariana Romanyshyn – Superhuman (ex-Grammarly), Ukraine</li>
+<li>Abdulfattah Safa - Koç University, Turkey</li>
+<li>Kengatharaiyer Sarveswaran - University of Jaffna, Sri Lanka</li>
+<li>Guokan Shang - Mohamed bin Zayed University of Artificial Intelligence, United Arab Emirates</li>
+<li>Ravi Shekhar - University of Essex, United Kingdom</li>
+<li>Archchana Sindhujan - University of Surrey, United Kingdom</li>
+<li>Milena Slavcheva - Institute of Information and Communication Technologies, Bulgarian Academy of Sciences, Bulgaria</li>
+<li>Rui Sousa-Silva - University of Porto, Portugal</li>
+<li>Ranka Stanković - University of Belgrade, Serbia</li>
+<li>Ivelina Stoyanova - Deaf Studies Institute, Bulgaria</li>
+<li>Sara Stymne - Uppsala University, Sweden</li>
+<li>Tianda Sun - University of York, United Kingdom</li>
+<li>Hristo Tanev - Joint Research Centre, European Commission, Italy</li>
+<li>Uthayasanker Thayasivam - University of Moratuwa, Sri Lanka</li>
+<li>Adaku Uchendu - MIT Lincoln Laboratory, USA</li>
+<li>Daan van Esch - Leiden University, Netherlands</li>
+<li>Francielle Vargas - Universidade de São Paulo, Brazil</li>
+<li>Justin Vasselli - Nara Institute of Science and Technology (NAIST), Japan</li>
+<li>Raúl Vázquez - University of Helsinki, Finland</li>
+<li>Veronika Vincze - University of Szeged, Hungary</li>
+<li>Taro Watanabe - Nara Institute of Science and Technology (NAIST), Japan</li>
+<li>Philip Weber - Aston University, United Kingdom</li>
+<li>Zheng Xin Yong - Brown University, USA</li>
+<li>Arturs Znotins - University of Latvia, Latvia</li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <div id="side-table-wrapper" style="font-size: small">
+
+        <h4 id="side-table-header">Important Dates</h4>
+        <table id="important-dates" class="table">
+                        <tbody>
+                        <tr>
+                            <td>Paper submission due</td>
+                            <td> January 6 (Tue), 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Notification of acceptance</td>
+                            <td> January 28 (Wed), 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Camera-ready due</td>
+                            <td> February 3 (Tue), 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Workshop</td>
+                            <td>March 29, 2026 co-located with <a href="https://2026.eacl.org/"
+                                                                      target="_blank">EACL 2026</a></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><small>* These dates are approximate dates based on EACL 2026 and are
+                                subject to changes.</small></td>
+                        </tr>
+                        </tbody>
+                    </table>
+          </font><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
