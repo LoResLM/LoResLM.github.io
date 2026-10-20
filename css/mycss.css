@@ -15,14 +15,20 @@
 /*  margin: 0;*/
 /*}*/
 
+/* Banner: scale the photo to fill the header, darken slightly so the title is readable */
 .page-header {
-  color: black;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38)), url('../banner.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  min-height: 400px;
+  color: #fff;
 }
 
-/* Or target specific elements */
 .project-name,
 .project-tagline {
-  color: black;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
 }
 
 .dropdown-menu li {
